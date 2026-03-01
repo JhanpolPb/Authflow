@@ -1,10 +1,10 @@
-# 🏢 AuthFlow – Sistema de Gestión de Usuarios con Autenticación
+#  AuthFlow – Sistema de Gestión de Usuarios con Autenticación
 
 Sistema Full Stack de control de asistencia empresarial (Check-in / Check-out) con autenticación JWT, roles de usuario y panel de administración.
 
 ---
 
-## 🏗️ Arquitectura del Proyecto
+##  Arquitectura del Proyecto
 
 ```
 authflow/
@@ -52,7 +52,7 @@ authflow/
 
 ---
 
-## ⚡ Instalación y configuración
+##  Instalación y configuración
 
 ### 1. Base de datos MySQL
 
@@ -89,12 +89,12 @@ La app arranca en **http://localhost:5173** (Vite proxea `/api` → puerto 5000)
 
 ---
 
-## 🔐 Credenciales iniciales
+##  Credenciales iniciales
 
 | Campo | Valor |
 |-------|-------|
 | Email | admin@authflow.com |
-| Password | Admin1234! |
+| Password | 123456 |
 | Rol | admin |
 
 > ⚠️ Cambia esta contraseña en producción.
@@ -135,7 +135,7 @@ La app arranca en **http://localhost:5173** (Vite proxea `/api` → puerto 5000)
 
 ---
 
-## 🔒 Flujo de Autenticación JWT
+##  Flujo de Autenticación JWT
 
 ```
 Login ──► accessToken (8h) + refreshToken (7d)
@@ -150,7 +150,7 @@ Login ──► accessToken (8h) + refreshToken (7d)
 
 ---
 
-## 🗄️ Schema de BD
+##  Schema de BD
 
 ```
 usuarios
@@ -165,7 +165,7 @@ refresh_tokens
 
 ---
 
-## 🛡️ Seguridad implementada
+##  Seguridad implementada
 
 - Contraseñas hasheadas con **bcrypt** (salt 10)
 - Tokens **JWT** firmados con secret de entorno
@@ -174,14 +174,3 @@ refresh_tokens
 - **Refresh token rotation** almacenado en BD
 - Validación de inputs con **express-validator**
 - CORS restringido al origen del frontend
-
----
-
-## 🚀 Próximos pasos sugeridos
-
-- [ ] Agregar paginación al historial en el frontend
-- [ ] Exportar reportes a Excel/CSV
-- [ ] Notificaciones por email de entrada/salida
-- [ ] Rate limiting con `express-rate-limit`
-- [ ] Logs de auditoría
-- [ ] Dockerizar con `docker-compose`
