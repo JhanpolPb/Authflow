@@ -148,6 +148,9 @@ Login ──► accessToken (8h) + refreshToken (7d)
                               ──► nuevo accessToken automáticamente
 ```
 
+#Autor
+
+Jhanpol Parra
 ---
 
 ##  Schema de BD
